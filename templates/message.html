@@ -1,0 +1,8 @@
+<!-- Шаблон одного нового сообщения.
+     hx-swap-oob="beforeend:#chat-messages" заставит HTMX вставить
+     этот HTML в конец контейнера #chat-messages -->
+<div id="chat-messages" hx-swap-oob="beforeend">
+    <div class="message">
+        <strong>{{.Username}}:</strong> {{.Content}}
+    </div>
+</div>
