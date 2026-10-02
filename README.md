@@ -4,12 +4,14 @@ A fast, lightweight, and full-stack **Web Chat application** built with **Go (Go
 
 ## 🚀 Features
 * **Real-time Messaging**: Powered by full-duplex **Gorilla WebSocket** connections for instant chat updates.
+* **Event-Driven Architecture (Apache Kafka)**: Uses Kafka as a high-throughput message broker to handle chat events, enable pub/sub message distribution, and decouple background processing.
 * **Modern Frontend (HTMX)**: Dynamic UI interactions using **HTMX** combined with Go's `html/template` engine, eliminating the need for heavy JavaScript frameworks.
 * **User Authentication**: Built-in secure user registration, login, and session logout functionality.
 * **Protected Routes**: Secure group routing via `authMiddleware.Middleware` to safeguard private channels.
 * **Type-Safe DB Queries**: Integrated with SQLC to compile raw SQL from `sql/queries/` into clean Go source code.
 * **Database Migrations**: Automatic database schema management for persistent data.
-* **Dockerized Setup**: Ready for local development and deployment via Docker Compose.
+* **Dockerized Setup**: Ready for local development and deployment via Docker Compose (includes Go app, PostgreSQL, Kafka, and Zookeeper/KRaft).
+
 
 
 ## 📁 Project Structure
@@ -24,8 +26,9 @@ A fast, lightweight, and full-stack **Web Chat application** built with **Go (Go
 Before running the project, make sure you have the following installed:
 * [Go](https://go.dev) (1.22+ recommended)
 * [Docker](https://docker.com) & [Docker Compose](https://docker.com)
+* [Apache Kafka](https://apache.org) (Managed automatically via Docker Compose)
 * [SQLC](https://sqlc.dev) (Optional, only for regenerating DB code)
-
+* 
 ## ⚡ Getting Started
 
 ### 1. Clone the Repository
